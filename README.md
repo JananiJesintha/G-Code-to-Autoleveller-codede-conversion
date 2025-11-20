@@ -46,26 +46,12 @@ Overall, PCB AutoLEVLER plays a vital role in ensuring the accuracy, consistency
 ### Engraving Code
 
 ```
-(AutoLeveller, Version: 0.7.7, http://autoleveller.co.uk)
-(Copyright 2013 James Hawthorne PhD)
-(Original file: ebd_exp_4 engraving 1.txt)
-(Creation date: 20/11/2025 time: 13:30)
-
-(This program and any of its output is licensed under GPLv2 and as such...)
-(AutoLeveller comes with ABSOLUTELY NO WARRANTY; for details, see sections 11 and 12 of the GPLv2)
-
-(prerequisites)
-(1. need a working probe)
-(2. tool needs to be within 10mm of copper board for the 1st probe, )
-(i.e. Z0.000 should be no more than 10mm above the board initially)
-(Note: The first probe will touch off Z to 0.000 when it first touches to copper, )
-(all other probe values are relative to this first point)
-
-G21 (millimeters)
-G90 (absolute distance mode, not incremental)
-
-(begin initial probe and set Z to 0)
-G0 X0 Y0 Z0
+%
+M6T9
+G54
+G0 X0 Y0
+G0 Z5 
+M01
 G31 Z-10 F100
 G92 Z0
 G0 Z2
@@ -3312,31 +3298,18 @@ G1 Y26.916 Z[#100 + -0.2]
 #100=[#102+0.87544*#101-0.87544*#102]
 G1 Y28.72 Z[#100 + -0.2]
 G0 Z2
+G00 X00 Y00
 M5
 M2
 %
 ```
 ```
-(AutoLeveller, Version: 0.7.7, http://autoleveller.co.uk)
-(Copyright 2013 James Hawthorne PhD)
-(Original file: ebd exp_4 engraving 2.txt)
-(Creation date: 20/11/2025 time: 13:30)
-
-(This program and any of its output is licensed under GPLv2 and as such...)
-(AutoLeveller comes with ABSOLUTELY NO WARRANTY; for details, see sections 11 and 12 of the GPLv2)
-
-(prerequisites)
-(1. need a working probe)
-(2. tool needs to be within 10mm of copper board for the 1st probe, )
-(i.e. Z0.000 should be no more than 10mm above the board initially)
-(Note: The first probe will touch off Z to 0.000 when it first touches to copper, )
-(all other probe values are relative to this first point)
-
-G21 (millimeters)
-G90 (absolute distance mode, not incremental)
-
-(begin initial probe and set Z to 0)
-G0 X0 Y0 Z0
+%
+M6T9
+G54
+G0 X0 Y0
+G0 Z5 
+M01
 G31 Z-10 F100
 G92 Z0
 G0 Z2
@@ -6067,6 +6040,7 @@ G1 X52.927 Y12.681 Z[#100 + -0.2]
 #100=[#102+0.94882*#101-0.94882*#102]
 G1 Y13.257 Z[#100 + -0.2]
 G0 Z2
+G00 X00 Y00
 M5
 M2
 %
@@ -6078,13 +6052,11 @@ Drill 0.8
 
 ```
 %
-( CopperCAM - 02/10/2025 / ISO-Mill Output )
-( C:\COPPERCAM\CopperCAM.iso created 20/11/2025 at 11:52 )
-( Workpiece dimensions: 91.11 x 40.63 x 1 mm )
-G21 G40 G54
-G80 G90 G94
-( Tool #3 "Basic Drill" / Diameter 0.8 mm )
-T3 M06
+M6T9
+G54
+G0 X0 Y0
+G0 Z5 
+M01
 M03 S12000
 G00 X20.538 Y26.996
 G00 Z0
@@ -6138,6 +6110,7 @@ G00 X52.288 Y13.026
 G00 Z0
 G01 F60 Z-1
 G00 Z2
+G00 X00 Y00
 M05
 M02
 %
@@ -6147,13 +6120,11 @@ Drill 1
 
 ```
 %
-( CopperCAM - 02/10/2025 / ISO-Mill Output )
-( C:\COPPERCAM\CopperCAM.iso created 20/11/2025 at 11:54 )
-( Workpiece dimensions: 91.11 x 40.63 x 1 mm )
-G21 G40 G54
-G80 G90 G94
-( Tool #4 "Basic Drill" / Diameter 1 mm )
-T4 M06
+M6T9
+G54
+G0 X0 Y0
+G0 Z5 
+M01
 M03 S12000
 G00 X52.328 Y24.456
 G00 Z0
@@ -6233,9 +6204,11 @@ G01 F60 Z-1
 G01 F300 X9.158
 G02 I-0.05 J0 X9.158 Y29.536
 G00 Z2
+G00 X00 Y00
 M05
 M02
 %
+
 ```
 
 
@@ -6243,13 +6216,11 @@ M02
 
 ```
 %
-( CopperCAM - 02/10/2025 / ISO-Mill Output )
-( C:\COPPERCAM\CopperCAM.iso created 20/11/2025 at 11:58 )
-( Workpiece dimensions: 91.11 x 40.63 x 1 mm )
-G21 G40 G54
-G80 G90 G94
-( Tool #2 "Basic Cutter" / Diameter 3 mm )
-T2 M06
+M6T9
+G54
+G0 X0 Y0
+G0 Z5 
+M01
 M03 S12000
 G00 X1.04 Y1.04
 G00 Z0
@@ -6259,6 +6230,7 @@ G01 Y39.59
 G01 X1.04
 G01 Y1.04
 G00 Z2
+G00 X00 Y00
 M05
 M02
 %
